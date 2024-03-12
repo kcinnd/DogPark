@@ -12,8 +12,11 @@ body {
 }
 
 .clickable-image {
+    max-width: 15%; /* Adjust the width as needed */
+    max-height: 200px; /* Adjust the height as needed */
     border: 5px solid black; /* Thick black inner border */
     cursor: pointer;
+    object-fit: cover; /* Maintain aspect ratio without distorting the image */
 }
 
 #popup-screen {
