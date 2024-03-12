@@ -38,11 +38,11 @@ body, html {
 }
 
 .hidden {
-    visibility: hidden;
+    display: none; /* This will ensure the element is not visible and does not take up any space */
 }
 
 .visible {
-    visibility: visible;
+    display: flex; /* Assuming you want to keep the flex layout for the popup */
 }
 
 .clicked {
