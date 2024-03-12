@@ -8,15 +8,17 @@ body {
 
 #images-container {
     display: flex;
-    gap: 2px; /* Adjust the gap as needed */
+    border: 5px solid black; /* Thick black border around the group */
+    max-height: 200px; /* Adjust based on your preference */
+    overflow: hidden; /* Ensures no overflow if images are larger */
 }
 
 .clickable-image {
-    max-width: 15%; /* Adjust the width as needed */
-    max-height: 200px; /* Adjust the height as needed */
-    border: 5px solid black; /* Thick black inner border */
+    max-width: 20%; /* Each image will take up 20% of the container's width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    flex-grow: 1; /* Ensures images fill the container */
     cursor: pointer;
-    object-fit: cover; /* Maintain aspect ratio without distorting the image */
 }
 
 #popup-screen {
