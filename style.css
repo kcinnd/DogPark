@@ -4,51 +4,47 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0; /* Optional: Change the background color if needed */
+    min-height: 100vh;
+    background-color: #f0f0f0;
 }
 
 #images-container {
     display: flex;
-    border: 5px solid black; /* Thick black border around the group */
-    width: auto; /* Let the container size adjust based on its content */
-    max-width: 95%; /* Limit the maximum width to prevent overflow */
-    align-items: center; /* Center images vertically */
-    flex-wrap: nowrap; /* Prevent images from wrapping */
-    overflow-x: auto; /* Allow horizontal scrolling if images don't fit */
+    border: 5px solid black;
+    max-width: 100%; /* Ensure the container doesn't overflow the viewport width */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    align-items: center;
 }
 
 .clickable-image {
-    flex: 1 0 auto; /* Allow the image to grow and shrink but not beyond its size */
-    max-height: 80vh; /* Limit the image height to a percentage of the viewport height */
-    object-fit: contain; /* Ensure full image is shown within its box */
-    cursor: pointer;
+    width: 20%; /* Adjust this value based on the number of images and desired size */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area of the element without distorting the image */
 }
 
 #popup-screen {
-    position: fixed; /* Or 'absolute', depending on your layout */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-    color: white; /* White text */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em; /* Larger text */
-    /* Add more styling as needed */
+    font-size: 2em;
+    visibility: hidden; /* Use visibility to show/hide the popup */
 }
 
 .hidden {
-    visibility: none;
+    visibility: hidden;
 }
 
 .visible {
-    visibility: block;
+    visibility: visible;
 }
 
-/* Add this to your existing CSS */
 .clicked {
-    filter: brightness(50%); /* Makes the image darker */
+    filter: brightness(50%);
 }
