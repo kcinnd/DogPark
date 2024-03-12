@@ -23,7 +23,6 @@ images.forEach(image => {
     });
 });
 
-// Close popup when clicked
 popupScreen.addEventListener('click', () => {
     popupScreen.classList.add('hidden');
     popupScreen.classList.remove('visible');
