@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+#images-container {
+    display: flex;
+    gap: 2px; /* Adjust the gap as needed */
+}
+
+.clickable-image {
+    border: 5px solid black; /* Thick black inner border */
+    cursor: pointer;
+}
+
+#popup-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0f0; /* Futuristic green text */
+    font-size: 5rem;
+    font-family: 'Consolas', 'Courier New', monospace;
+    visibility: hidden; /* Hide initially */
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
