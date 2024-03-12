@@ -37,3 +37,8 @@ body {
 .visible {
     visibility: visible;
 }
+
+/* Add this to your existing CSS */
+.clicked {
+    filter: brightness(50%); /* Makes the image darker */
+}
